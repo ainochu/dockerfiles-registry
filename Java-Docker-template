@@ -1,0 +1,10 @@
+ROM openjdk:8-jdk-alpine
+MAINTAINER GSD
+#TODO: change the name of the jar file
+ADD ./*app/target/*.jar /app/[JAR-FILE]
+
+#Java execution
+#TODO: change the name of the jar file
+CMD ["java", "-Xmx200m", "-jar", "/app/[JAR-FILE]"]
+#TODO: expose correct port
+EXPOSE 8080
